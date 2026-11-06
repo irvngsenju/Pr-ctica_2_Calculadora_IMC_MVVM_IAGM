@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IMC_MVVM_IAGM.Views.ImcPage"
+             Title="ImcPage">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16">
+            <Label Text="Calcula tu IMC"
+FontSize="26" FontAttributes="Bold" />
+            <!-- TwoWay lleva lo escrito al ViewModel. -->
+            <Label Text="Peso en kilogramos" />
+            <Entry Placeholder="Ejemplo: 70"
+Keyboard="Numeric"
+Text="{Binding ptext, Mode=TwoWay}" />
+            <Label Text="Estatura en metros" />
+            <Entry Placeholder="Ejemplo: 1.75"
+Keyboard="Numeric"
+Text="{Binding estaturatext, Mode=TwoWay}" />
+            <!-- El botón ejecuta el comando del ViewModel. -->
+            <Button Text="Calcular IMC"
+Command="{Binding CalcularCommand}" />
+            <!-- El Label muestra los cambios de Resultado. -->
+            <Label Text="{Binding Resultado}"   
+FontSize="22" />
+            <Label Text="{Binding Clasificacion}" 
+FontSize="22"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

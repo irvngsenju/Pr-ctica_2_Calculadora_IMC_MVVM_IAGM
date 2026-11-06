@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+xmlns:views="clr-namespace:IMC_MVVM_IAGM.Views"
+x:Class="IMC_MVVM_IAGM.AppShell"
+FlyoutBehavior="Disabled">
+<!-- Abrimos la página ubicada en la carpeta Views. -->
+<ShellContent
+Title="IMC"
+ContentTemplate="{DataTemplate views:ImcPage}"
+Route="ImcPage" />
+</Shell>    
